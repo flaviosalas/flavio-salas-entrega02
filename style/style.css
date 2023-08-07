@@ -1,0 +1,927 @@
+html {
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 1000px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+button {
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+
+
+
+.perfil {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: var(--radius-12, 0.75rem);
+    background: #ffffff;
+}
+
+.perfil__contenedor-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+}
+
+.perfil__foto-de-perfil {
+    width: 75%;
+    flex-shrink: 0;
+}
+
+.perfil__detalles {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.perfil__contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.perfil__nombre-profesion {
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.perfil__nombre-profesion .perfil__nombre {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.perfil__nombre-profesion .perfil__profesion {
+    margin: 0;
+    color: var(--gray, #828282);
+    font-size: 1.125rem;
+
+}
+
+.perfil__correo-telefono {
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.perfil__correo-telefono .perfil__correo,
+.perfil__telefono {
+    margin: 0;
+    font-size: 1rem;
+
+}
+
+.perfil__correo:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0e0"
+
+}
+
+.perfil__telefono:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f095"
+}
+
+.perfil__biografia {
+    gap: 1rem;
+}
+
+.perfil__descripcion {
+    gap: 1rem;
+    margin: 0;
+    color: var(--gray, #828282);
+    font-size: 1.125rem;
+
+}
+
+.perfil__descripcion--desktop {
+    display: none;
+}
+
+/*BOTONES
+En el diseño del Figma se ven los 3 botones alineados
+en la misma linea. Para evitar achicarlos y que queden muy
+pequeños decidí utilizar "flex-wrap: wrap;" para que los
+mismos se acomoden dinamicamente y se vean con el mismo tamaño
+que se ven en el Figma.*/
+
+.boton {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    border-radius: 0.75rem;
+    background: #FFF;
+}
+
+.boton__titulo {
+    color: var(--gray-2, #4F4F4F);
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.boton__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.boton__activo {
+    display: flex;
+    padding: .75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: var(--blue, #2F80ED);
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.boton__default {
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    padding: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--gray-2, #4F4F4F);
+    background: rgba(255, 255, 255, 0.00);
+    color: var(--gray-2, #4F4F4F);
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+/*PORFOLIO*/
+
+.portfolio {
+    margin: 1rem;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: stretch;
+    border-radius: var(--radius-12, 0.75rem);
+    background: #FFF;
+}
+
+.portfolio__contenido {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: stretch;
+}
+
+.portfolio__imagen {
+    align-self: center;
+    /* width: 15rem; */
+    width: 75%;
+    border-radius: var(--radius-12);
+    border: 1px solid var(--gray-3);
+}
+
+.portfolio__titulo {
+    display: flex;
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    padding: 0;
+    font-weight: 600;
+}
+
+.portfolio__hashtag {
+    width: 13.8125rem;
+    height: 1.1875rem;
+    margin: 0;
+    padding: 0;
+    color: var(--gray-2, #4F4F4F);
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.portfolio__descripcion {
+    align-self: stretch;
+    color: var(--gray, #828282);
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.portfolio__boton {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio__boton--demo {
+    display: flex;
+    padding: 0.75rem 2rem 0.6875rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: var(--radius-12);
+    background: var(--blue);
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.portfolio__boton--code {
+    cursor: pointer;
+    display: flex;
+    padding: 0.75rem 2rem 0.6875rem 2rem;
+    align-items: center;
+    border-radius: var(--radius-12);
+    border: 1px solid var(--blue);
+    background: rgba(255, 255, 255, 0.00);
+    color: var(--blue);
+
+    /* Texto */
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*SKILLS*/
+
+/*Tomando las medidas en rem que estaban en el figma, usé regla de
+tres simple para calcular el porcentaje de cada lenguaje*/
+
+.skills {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+    border-radius: 0.75rem;
+    background: #FFF;
+}
+
+.skills__titulo {
+    margin: 0;
+    color: var(--gray-2);
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.skills__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.skills__contenedor {
+    display: flex;
+    padding: 0.5rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+}
+
+
+.skills__lenguaje {
+    color: var(--gray);
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    display: inline-block;
+    width: 150px;
+
+}
+
+.skills__html,
+.skills__css,
+.skills__js,
+.skills__react {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    align-self: stretch;
+}
+
+.skills__progreso {
+    display: flex;
+    margin-left: 2rem;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+    background: var(--gray-3, #C4C4C4);
+}
+
+.skills__progreso--html {
+    background: var(--blue);
+    width: 88.46%;
+    height: 0.625rem;
+}
+
+
+.skills__progreso--css {
+    background: var(--blue);
+    width: 77.25%;
+    height: 0.625rem;
+    flex-shrink: 0;
+}
+
+.skills__progreso--js {
+    background: var(--blue);
+    width: 88.46%;
+    height: 0.625rem;
+    flex-shrink: 0;
+}
+
+
+.skills__progreso--react {
+    background: var(--blue);
+    width: 77.28%;
+    height: 0.625rem;
+    flex-shrink: 0;
+}
+
+/*CERTIFICADOS*/
+
+.certificados {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 0.75rem;
+    background: #FFF;
+}
+
+
+.certificados__titulo {
+    color: var(--gray-2);
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.certificados__contenido,
+.certificados__contenido--desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.certificados__contenido--desktop {
+    display: none;
+}
+
+.certificados__foto {
+    /* width: 12rem; */
+    width: 75%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--gray-3);
+    margin-bottom: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.certificados__matricula {
+    margin: 0;
+    padding-bottom: .25rem;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500;
+    align-self: self-start;
+}
+
+.certificados__fecha {
+    align-self: self-start;
+    margin: 0;
+    padding: 0;
+    color: var(--gray);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/*EXPERIENCIA*/
+
+.experiencia {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 0.75rem;
+    background: #FFF;
+}
+
+.experiencia__titulo {
+    color: var(--gray-2);
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.experiencia__contenido,
+.experiencia__contenido--desktop {
+
+    display: flex;
+    padding: 0rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.experiencia__contenido--desktop {
+    display: none;
+}
+
+.experiencia__contenido--adidas {
+
+    display: flex;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 0.75rem;
+    border: 1px solid var(--gray-3);
+}
+
+.experiencia__detalles {
+    margin: .75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.375rem;
+    align-self: stretch;
+}
+
+.experiencia__contenido--logo {
+    width: 3.4375rem;
+    height: 2.30231rem;
+}
+
+.experiencia__descripcion {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.375rem;
+}
+
+.experiencia__descripcion--fecha {
+    margin: 0;
+    padding: 0;
+    color: var(--gray);
+    text-align: center;
+
+    /* Texto3 */
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.experiencia__descripcion--matricula {
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.experiencia__descripcion--desc-mobile {
+    flex: 1 0 0;
+    color: var(--gray);
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.experiencia__descripcion--desc-desktop {
+    flex: 1 0 0;
+    color: var(--gray);
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+.proyectos,
+.paginado,
+.experiencia__descripcion--desktop,
+.experiencia__descripcion--desc-desktop {
+    display: none;
+}
+
+/*TABLET*/
+
+@media screen and (min-width: 568) {
+    body {
+        background-color: blue;
+    }
+
+    html {
+        background-color: red;
+    }
+
+}
+
+/*DESKTOP*/
+
+@media screen and (min-width: 1024px) {
+    body {
+        width: 1024px;
+    }
+
+    /*PERFIL*/
+
+    .perfil {
+        flex-direction: row;
+    }
+
+    .perfil__nombre-profesion {
+        padding: 0;
+        margin-right: 15rem;
+    }
+
+    .perfil__nombre-profesion .perfil__nombre {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .perfil__detalles {
+        display: flex;
+        align-self: auto;
+    }
+
+    .perfil__foto-de-perfil {
+        margin: .5rem;
+    }
+
+
+    .perfil__correo-telefono .perfil__correo,
+    .perfil__telefono {
+        font-size: 1rem;
+    }
+
+    .perfil__name {
+        margin-bottom: 2rem;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .perfil__descripcion,
+    .perfil__descripcion--desktop {
+        color: var(--gray, #828282);
+        font-size: 1.125rem;
+        display: flex;
+        font-size: 1rem;
+        width: 650px;
+    }
+
+    .perfil__contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .perfil__biografia {
+        flex-direction: column;
+        display: flex;
+        margin-top: 1rem;
+        gap: 1rem;
+        ;
+    }
+
+
+    .experiencia__contenido--desc-desktop {
+        display: block;
+    }
+
+    /*BOTONES*/
+
+    .boton__activo:hover {
+        background-color: var(--blue-2);
+    }
+
+    .boton__default:hover {
+        background-color: var(--blue);
+        color: #FFF;
+        border: 1px solid var(--blue);
+    }
+
+    .portfolio__boton--demo:hover {
+        background-color: var(--blue-2);
+    }
+
+    .portfolio__boton--code:hover {
+        background-color: var(--blue);
+        color: #FFF;
+    }
+
+    /*PORTFOLIO*/
+
+    .portfolio {
+        padding: 0;
+    }
+
+    .portfolio__descripcion {
+        font-size: 1rem;
+        order: 2;
+    }
+
+    .portfolio__titulo {
+        order: 1;
+    }
+
+    .portfolio__hashtag {
+        order: 0;
+    }
+
+    .portfolio__boton {
+        order: 4;
+    }
+
+    .portfolio__contenido {
+        background-color: white;
+        border-radius: .75rem;
+        padding: 1rem;
+    }
+
+    .portfolio__imagen {
+        width: 30rem;
+    }
+
+    /*EXPERIENCIA*/
+
+    .experiencia {
+        display: flex;
+
+    }
+
+    .experiencia__detalles {
+        flex-direction: row;
+        align-items: self-start;
+    }
+
+    .experiencia__descripcion {
+        margin: 0;
+        padding: 0;
+    }
+
+    .experiencia__contenedor {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .experiencia__contenido,
+    .experiencia__contenido--desktop,
+    .experiencia__descripcion--desc-desktop {
+        display: block;
+    }
+
+    .experiencia__detalles p {
+        font-size: .75rem;
+    }
+
+    .experiencia__descripcion--desc-mobile {
+        display: none;
+    }
+
+    .experiencia__detalles h3,
+    .experiencia__detalles h2 {
+        text-align: left;
+    }
+
+    .experiencia__detalles img {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .experiencia__contenido1 {
+        padding: 1rem 0 1rem 0;
+    }
+
+    .experiencia__contenido1 p {
+        padding: 0;
+        margin: 0;
+    }
+
+    /*SKILLS*/
+
+    .skills__contenido {
+        justify-content: center;
+        align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .skills__lenguaje {
+        width: 200px;
+
+    }
+
+    .skills__progreso {
+        margin-left: 5rem;
+    }
+
+    /*CERTIFICADOS*/
+
+
+    .certificados {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .certificados__titulo {
+        margin: 0;
+    }
+
+    .certificados__contenido,
+    .certificados__contenido--desktop {
+        display: flex;
+        align-self: center;
+        padding: .75rem;
+        width: 300px;
+        border-radius: .75rem;
+        border: 1px solid var(--gray-3);
+    }
+
+    .certificados__foto {
+        border: 1px solid var(--gray-3);
+        padding-left: 4rem;
+        padding-right: 4rem;
+        margin-bottom: 1rem;
+        width: 10rem;
+    }
+
+    /*PAGINADO*/
+
+    .paginado {
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        align-self: stretch;
+        border-radius: var(--radius-12);
+    }
+
+    .paginado a {
+        color: var(--gray);
+        border-radius: var(--radius-4);
+        border: 1px solid var(--gray-2);
+        float: left;
+        font-size: 1rem;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: var(--gray-2);
+
+    }
+
+    .paginado a:pointer {
+        cursor: pointer;
+    }
+
+    .paginado a.active {
+        background: var(--blue);
+        color: white;
+        border: 1px solid var(--blue);
+
+    }
+
+    .paginado a:hover {
+        border-radius: 0.25rem;
+        border: 1px solid var(--blue);
+
+    }
+
+    /*PROYECTOS*/
+
+    .proyectos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1rem;
+        gap: 1rem;
+        border-radius: var(--radius-12);
+    }
+
+    .proyectos img {
+        width: 18rem;
+    }
+
+    /*GRID*/
+
+    .grid-escritorio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .skills {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .portfolio {
+        grid-area: 1 / 2 / 3 / 3;
+    }
+
+    .certificados {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    .experiencia {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    .boton {
+        grid-area: 4 / 1 / 5 / 3;
+    }
+
+    .proyectos {
+        grid-area: 5 / 1 / 6 / 3;
+    }
+
+}
