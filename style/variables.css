@@ -5,6 +5,6 @@
     --gray-3: #C4C4C4;
     --blue: #2F80ED;
     --blue-2: #174682;
-    --radius-4: .25rem;
-    --radius-12: .75rem;
+    --radius-4: 4px;
+    --radius-12: 12px;
 }

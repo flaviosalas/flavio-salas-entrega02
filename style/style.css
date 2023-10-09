@@ -17,7 +17,7 @@ a,
 button {
     color: #000000;
     font-family: Montserrat;
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
     font-weight: 500;
 
 }
@@ -27,8 +27,8 @@ button {
 
 .perfil {
     display: flex;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 16px;
+    padding: 16px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
     align-self: stretch;
 }
 
@@ -52,7 +52,7 @@ button {
 
 .perfil__detalles {
     display: flex;
-    padding: 1rem;
+    padding: 16px;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
@@ -65,20 +65,20 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .perfil__nombre-profesion {
     display: flex;
-    padding: 0.5rem;
+    padding: 8px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .perfil__nombre-profesion .perfil__nombre {
-    margin-top: .5rem;
+    margin-top:8px;
     margin-bottom: 0;
     font-weight: 600;
 }
@@ -92,10 +92,10 @@ button {
 
 .perfil__correo-telefono {
     display: flex;
-    padding: 0.5rem;
+    padding: 8px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .perfil__correo-telefono .perfil__correo,
@@ -119,11 +119,11 @@ button {
 }
 
 .perfil__biografia {
-    gap: 1rem;
+    gap: 16px;
 }
 
 .perfil__descripcion {
-    gap: 1rem;
+    gap: 16px;
     margin: 0;
     color: var(--gray, #828282);
     font-size: 1.125rem;
@@ -143,13 +143,13 @@ que se ven en el Figma.*/
 
 .boton {
     display: flex;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 16px;
+    margin: 16px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
-    border-radius: 0.75rem;
+    gap: 32px;
+    border-radius: 12px;
     background: #FFF;
 }
 
@@ -165,16 +165,16 @@ que se ven en el Figma.*/
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .boton__activo {
     display: flex;
-    padding: .75rem;
+    padding: 12px;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
-    border-radius: 0.75rem;
+    gap: 10px;
+    border-radius: 12px;
     border: none;
     background: var(--blue, #2F80ED);
     color: #FFF;
@@ -188,11 +188,11 @@ que se ven en el Figma.*/
     cursor: pointer;
     display: flex;
     font-size: 1rem;
-    padding: 0.75rem;
+    padding: 12px;
     justify-content: center;
     align-items: center;
     gap: 0.625rem;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     border: 1px solid var(--gray-2, #4F4F4F);
     background: rgba(255, 255, 255, 0.00);
     color: var(--gray-2, #4F4F4F);
@@ -202,36 +202,63 @@ que se ven en el Figma.*/
 
 /*PORFOLIO*/
 
-.portfolio {
-    margin: 1rem;
-    display: flex;
-    padding: 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    align-self: stretch;
-    border-radius: var(--radius-12, 0.75rem);
-    background: #FFF;
+.portfolio, .proyectos {
+    margin: 16px;
 }
 
-.portfolio__contenido {
+.portfolio, .proyecto-principal {
+    padding: 0;
+}
 
+.proyecto-principal {
+    width: auto !important;
+    text-align: left !important;
+    align-self: flex-start !important;
+    border-radius: var(--radius-12);
+    background-color: #FFF !important;
+    padding: 16px;
+}
+
+
+
+
+
+.portfolio__contenido, 
+.proyectos__responsive,
+.proyectos__javascript,
+.proyectos__react {
+    border-radius: var(--radius-12);
+    background-color: #FFF;
+    padding: 16px;
+    margin-bottom: 16px !important;
+}
+
+.certificados__contenido {
+    border: none !important;
+}
+
+.portfolio__contenido, 
+.proyectos__responsive,
+.proyectos__javascript,
+.proyectos__react {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
     align-self: stretch;
 }
 
-.portfolio__imagen {
+.proyecto-principal {
+    display: none;
+}
+
+.portfolio__imagen, .proyectos__imagen {
     align-self: center;
-    /* width: 15rem; */
     width: 75%;
     border-radius: var(--radius-12);
     border: 1px solid var(--gray-3);
 }
 
-.portfolio__titulo {
+.portfolio__titulo, .proyectos__titulo {
     display: flex;
     margin: 0;
     font-family: Montserrat;
@@ -240,7 +267,7 @@ que se ven en el Figma.*/
     font-weight: 600;
 }
 
-.portfolio__hashtag {
+.portfolio__hashtag, .proyectos__hashtag {
     width: 13.8125rem;
     height: 1.1875rem;
     margin: 0;
@@ -251,7 +278,7 @@ que se ven en el Figma.*/
     font-weight: 600;
 }
 
-.portfolio__descripcion {
+.portfolio__descripcion, .proyectos__descripcion {
     align-self: stretch;
     color: var(--gray, #828282);
     font-family: Montserrat;
@@ -260,16 +287,16 @@ que se ven en el Figma.*/
     margin: 0;
 }
 
-.portfolio__boton {
+.portfolio__boton, .proyectos__boton {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
 }
 
-.portfolio__boton--demo {
+.portfolio__boton--demo, .proyectos__boton--demo {
     display: flex;
-    padding: 0.75rem 2rem 0.6875rem 2rem;
+    padding: 12px 32px 11px 32px;
     justify-content: center;
     align-items: center;
     border: none;
@@ -282,20 +309,30 @@ que se ven en el Figma.*/
     cursor: pointer;
 }
 
-.portfolio__boton--code {
+.portfolio__boton--code, .proyectos__boton--code {
     cursor: pointer;
     display: flex;
-    padding: 0.75rem 2rem 0.6875rem 2rem;
+    padding: 12px 32px 11px 32px;
     align-items: center;
     border-radius: var(--radius-12);
     border: 1px solid var(--blue);
     background: rgba(255, 255, 255, 0.00);
     color: var(--blue);
-
-    /* Texto */
     font-family: Montserrat;
     font-size: 1rem;
     font-weight: 500;
+}
+
+.portfolio__boton--code:hover, 
+.proyectos__boton--code:hover,
+.portfolio__boton--demo:hover, 
+.proyectos__boton--demo:hover {
+    background-color: #183c6b !important;
+}
+
+.portfolio__boton--code:hover, 
+.proyectos__boton--code:hover {
+    color: white;
 }
 
 /*SKILLS*/
@@ -305,13 +342,13 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 
 .skills {
     display: flex;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 16px;
+    padding: 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 16px;
     align-self: stretch;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     background: #FFF;
 }
 
@@ -333,11 +370,11 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 
 .skills__contenedor {
     display: flex;
-    padding: 0.5rem 0rem;
+    padding: 8px 0px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
     align-self: stretch;
 }
 
@@ -360,39 +397,39 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 16px;
     align-self: stretch;
 }
 
 .skills__progreso {
     display: flex;
-    margin-left: 2rem;
+    margin-left: 32px;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.625rem;
+    gap: 10px;
     background: var(--gray-3, #C4C4C4);
 }
 
 .skills__progreso--html {
     background: var(--blue);
     width: 88.46%;
-    height: 0.625rem;
+    height: 10px;
 }
 
 
 .skills__progreso--css {
     background: var(--blue);
     width: 77.25%;
-    height: 0.625rem;
+    height: 10px;
     flex-shrink: 0;
 }
 
 .skills__progreso--js {
     background: var(--blue);
     width: 88.46%;
-    height: 0.625rem;
+    height: 10px;
     flex-shrink: 0;
 }
 
@@ -400,7 +437,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 .skills__progreso--react {
     background: var(--blue);
     width: 77.28%;
-    height: 0.625rem;
+    height: 10px;
     flex-shrink: 0;
 }
 
@@ -408,11 +445,11 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 
 .certificados {
     display: flex;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 16px;
+    margin: 16px;
     flex-direction: column;
     align-items: flex-start;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     background: #FFF;
 }
 
@@ -438,20 +475,25 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     display: none;
 }
 
+.certificados__contenido {
+    margin-bottom: 12px !important;
+}
+
+
 .certificados__foto {
     /* width: 12rem; */
     width: 75%;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     border: 1px solid var(--gray-3);
-    margin-bottom: 1.75rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 
 .certificados__matricula {
     margin: 0;
-    padding-bottom: .25rem;
+    padding-bottom: 4px;
     color: #000;
     font-family: Montserrat;
     font-size: 1rem;
@@ -465,7 +507,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     padding: 0;
     color: var(--gray);
     font-family: Montserrat;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -473,12 +515,12 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 
 .experiencia {
     display: flex;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 16px;
+    padding: 16px;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     background: #FFF;
 }
 
@@ -489,6 +531,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     font-weight: 600;
     margin-top: 0;
 }
+
 
 .experiencia__contenido,
 .experiencia__contenido--desktop {
@@ -506,31 +549,31 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 }
 
 .experiencia__contenido--adidas {
-
+    margin-bottom: 16px !important;
     display: flex;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 24px;
+    padding-bottom: 24px;
     justify-content: center;
     align-items: center;
     flex: 1 0 0;
     align-self: stretch;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     border: 1px solid var(--gray-3);
 }
 
 .experiencia__detalles {
-    margin: .75rem;
+    margin: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.375rem;
+    gap: 6px;
     align-self: stretch;
 }
 
 .experiencia__contenido--logo {
-    width: 3.4375rem;
-    height: 2.30231rem;
+    width: 55px;
+    height: 37px;
 }
 
 .experiencia__descripcion {
@@ -538,7 +581,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     padding: 0;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.375rem;
+    gap: 6px;
 }
 
 .experiencia__descripcion--fecha {
@@ -569,7 +612,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     font-family: Montserrat;
     font-size: 1rem;
     font-weight: 500;
-    margin-right: 1rem;
+    margin-right: 16px;
 }
 
 .experiencia__descripcion--desc-desktop {
@@ -580,9 +623,42 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     font-weight: 500;
 }
 
+    .paginado {
+        margin: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: var(--radius-12);
+    }
 
-.proyectos,
-.paginado,
+    .paginado a {
+        color: var(--gray);
+        border-radius: var(--radius-4);
+        border: 1px solid var(--gray-2);
+        float: left;
+        font-size: 1rem;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: var(--gray-2);
+
+    }
+
+    .paginado a:pointer {
+        cursor: pointer;
+    }
+
+    .paginado a.active {
+        background: var(--blue);
+        color: white;
+        border: 1px solid var(--blue);
+
+    }
+
+
+/* .proyectos, */
 .experiencia__descripcion--desktop,
 .experiencia__descripcion--desc-desktop {
     display: none;
@@ -616,7 +692,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 
     .perfil__nombre-profesion {
         padding: 0;
-        margin-right: 15rem;
+        margin-right: 240px;
     }
 
     .perfil__nombre-profesion .perfil__nombre {
@@ -631,7 +707,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     }
 
     .perfil__foto-de-perfil {
-        margin: .5rem;
+        margin: 8px;
     }
 
 
@@ -641,7 +717,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     }
 
     .perfil__name {
-        margin-bottom: 2rem;
+        margin-bottom: 32px;
         flex-direction: row;
         align-items: center;
 
@@ -665,11 +741,10 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     .perfil__biografia {
         flex-direction: column;
         display: flex;
-        margin-top: 1rem;
-        gap: 1rem;
+        margin-top: 16px;
+        gap: 16px;
         ;
     }
-
 
     .experiencia__contenido--desc-desktop {
         display: block;
@@ -698,35 +773,53 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 
     /*PORTFOLIO*/
 
-    .portfolio {
+    .portfolio, .proyectos {
         padding: 0;
     }
 
-    .portfolio__descripcion {
+    .proyectos__responsive, 
+    .proyectos__javascript,
+    .proyectos__react {
+        width: 288px;
+    }
+
+    .portfolio > .proyectos__responsive {
+        width: 400px !important;
+    }
+
+
+    .portfolio__descripcion, .proyectos__descripcion {
+        margin-bottom: 16px;
         font-size: 1rem;
         order: 2;
     }
 
-    .portfolio__titulo {
+    .portfolio__titulo, .proyectos__titulo {
+        margin-bottom: 16px;
         order: 1;
     }
 
-    .portfolio__hashtag {
+    .portfolio__hashtag, .proyectos__hashtag {
+        /* margin-bottom: 16px; */
         order: 0;
     }
 
-    .portfolio__boton {
+    .portfolio__boton, .proyectos__boton {
         order: 4;
     }
 
-    .portfolio__contenido {
+    .portfolio__contenido, .proyectos__responsive,
+    .proyectos__javascript,
+    .proyectos__react {
         background-color: white;
-        border-radius: .75rem;
-        padding: 1rem;
+        border-radius: 12px;
+        padding: 16px;
     }
 
-    .portfolio__imagen {
-        width: 30rem;
+    .proyecto-principal > .proyectos__responsive {
+        display: flex !important;
+        justify-content: center !important;
+        width: auto !important;
     }
 
     /*EXPERIENCIA*/
@@ -751,7 +844,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 16px;
     }
 
     .experiencia__contenido,
@@ -774,12 +867,12 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     }
 
     .experiencia__detalles img {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 16px;
+        margin-right: 16px;
     }
 
     .experiencia__contenido1 {
-        padding: 1rem 0 1rem 0;
+        padding: 16px 0 16px 0;
     }
 
     .experiencia__contenido1 p {
@@ -792,8 +885,8 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     .skills__contenido {
         justify-content: center;
         align-items: center;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
     .skills__lenguaje {
@@ -802,7 +895,7 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     }
 
     .skills__progreso {
-        margin-left: 5rem;
+        margin-left: 80px;
     }
 
     /*CERTIFICADOS*/
@@ -810,40 +903,46 @@ tres simple para calcular el porcentaje de cada lenguaje*/
 
     .certificados {
         display: flex;
-        gap: 1rem;
+        gap: 16px;
     }
 
     .certificados__titulo {
         margin: 0;
     }
 
+    .certificados__contenedor {
+        border-radius: 12px;
+        border: 1px solid var(--gray-3);
+        margin: 8px;
+    }
+
     .certificados__contenido,
     .certificados__contenido--desktop {
         display: flex;
         align-self: center;
-        padding: .75rem;
+        padding: 12px;
         width: 300px;
-        border-radius: .75rem;
+        border-radius: 12px;
         border: 1px solid var(--gray-3);
     }
 
     .certificados__foto {
         border: 1px solid var(--gray-3);
-        padding-left: 4rem;
-        padding-right: 4rem;
-        margin-bottom: 1rem;
-        width: 10rem;
+        padding-left: 34px;
+        padding-right: 34px;
+        margin-bottom: 16px;
+        width: 160px;
     }
 
     /*PAGINADO*/
 
     .paginado {
-        margin: 2rem;
+        margin: 32px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 0.625rem;
+        gap: 10px;
         align-self: stretch;
         border-radius: var(--radius-12);
     }
@@ -882,16 +981,22 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     .proyectos {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        margin: 1rem;
-        gap: 1rem;
+        justify-content: flex-start;
         border-radius: var(--radius-12);
+        gap: 1rem !important;
     }
 
     .proyectos img {
-        width: 18rem;
+        width: 15rem;
+        align-self: center;
     }
 
+
+    .proyecto-principal {
+        display: block;
+        width: 500px !important;
+    }
+    
     /*GRID*/
 
     .grid-escritorio {
@@ -923,5 +1028,28 @@ tres simple para calcular el porcentaje de cada lenguaje*/
     .proyectos {
         grid-area: 5 / 1 / 6 / 3;
     }
+
+    .paginado {
+        grid-area: 6 / 1 / 7 / 3;
+        text-align: center;
+    }
+            
+
+    /*
+.grid-escritorio {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: auto 1fr auto;
+}
+
+.skills { grid-area: 1 / 1 / 2 / 2; }
+.portfolio { grid-area: 1 / 2 / 2 / 3; }
+.certificados { grid-area: 2 / 1 / 3 / 2; }
+.experiencia { grid-area: 2 / 2 / 3 / 3; }
+.boton { grid-area: 3 / 1 / 4 / 3; }
+.proyectos { grid-area: 4 / 1 / 5 / 3; }
+.paginado { grid-area: 5 / 1 / 6 / 3; }
+    
+    */
 
 }
